@@ -30,13 +30,13 @@ export function Awards() {
               className="flex items-center justify-between py-6 border-b border-border group"
             >
               <div className="flex items-center gap-6">
-                <span className="text-xs text-secondary tabular-nums w-6">{String(i + 1).padStart(2, "0")}</span>
+                <span className="text-sm text-secondary tabular-nums w-8 font-medium">{String(i + 1).padStart(2, "0")}</span>
                 <div>
-                  <p className="font-semibold text-primary group-hover:text-accent transition-colors">{award.name}</p>
-                  <p className="text-sm text-secondary">{award.detail}</p>
+                  <p className="font-black text-xl uppercase text-primary group-hover:text-accent transition-colors">{award.name}</p>
+                  <p className="text-base text-secondary mt-0.5">{award.detail}</p>
                 </div>
               </div>
-              <span className="text-sm text-secondary tabular-nums">{award.year}</span>
+              <span className="text-base text-secondary tabular-nums font-medium">{award.year}</span>
             </motion.div>
           ))}
         </div>

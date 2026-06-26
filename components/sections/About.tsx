@@ -49,22 +49,22 @@ export function About() {
 
         <div className="relative">
           {/* Vertical line */}
-          <div className="absolute left-0 top-0 bottom-0 w-px bg-border ml-[5px]" />
+          <div className="absolute left-0 top-0 bottom-0 w-0.5 bg-border ml-[7px]" />
 
-          <div className="space-y-10 pl-10">
+          <div className="space-y-12 pl-12">
             {timeline.map((item, i) => (
               <motion.div
                 key={i}
-                initial={{ opacity: 0, x: -16 }}
+                initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.06, duration: 0.4 }}
                 className="relative"
               >
                 {/* Dot */}
-                <div className="absolute -left-10 top-2 w-[11px] h-[11px] rounded-full bg-accent border-2 border-surface shadow-sm" />
-                <span className="text-xs font-semibold text-accent uppercase tracking-[0.15em]">{item.year}</span>
-                <p className="text-base font-medium text-primary mt-1">{item.label}</p>
+                <div className="absolute -left-12 top-2.5 w-4 h-4 rounded-full bg-accent border-2 border-surface shadow-md" />
+                <span className="text-sm font-bold text-accent uppercase tracking-[0.18em]">{item.year}</span>
+                <p className="text-xl font-bold text-primary mt-1 leading-snug">{item.label}</p>
               </motion.div>
             ))}
           </div>

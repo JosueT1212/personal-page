@@ -31,13 +31,13 @@ export function Projects() {
             >
               <div className="flex items-start justify-between mb-6">
                 <div>
-                  <p className="text-xs text-secondary uppercase tracking-widest mb-2">
+                  <p className="text-sm text-secondary uppercase tracking-widest mb-2 font-medium">
                     {String(i + 1).padStart(2, "0")} · AI / ML
                   </p>
-                  <h3 className="font-black uppercase text-primary text-2xl leading-tight">
+                  <h3 className="font-black uppercase text-primary text-3xl leading-tight">
                     {project.title}
                   </h3>
-                  <p className="text-sm text-secondary mt-1">{project.subtitle}</p>
+                  <p className="text-base text-secondary mt-1 font-medium">{project.subtitle}</p>
                 </div>
                 <a
                   href={project.github}
@@ -52,19 +52,19 @@ export function Projects() {
                 </a>
               </div>
 
-              <p className="text-sm text-secondary leading-relaxed mb-6">{project.description}</p>
+              <p className="text-base text-secondary leading-relaxed mb-6">{project.description}</p>
 
-              <ul className="space-y-2 mb-6 flex-1">
+              <ul className="space-y-2.5 mb-6 flex-1">
                 {project.highlights.map((h, j) => (
-                  <li key={j} className="text-xs text-secondary flex gap-2">
-                    <span className="text-accent flex-shrink-0">→</span>
+                  <li key={j} className="text-sm text-secondary flex gap-2">
+                    <span className="text-accent flex-shrink-0 font-bold">→</span>
                     <span>{h}</span>
                   </li>
                 ))}
               </ul>
 
               <div className="border-t border-border pt-4">
-                <p className="text-xs text-secondary uppercase tracking-widest mb-2">
+                <p className="text-sm text-secondary uppercase tracking-widest font-medium">
                   {project.stack.join(" · ")}
                 </p>
               </div>

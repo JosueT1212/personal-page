@@ -33,23 +33,23 @@ export function Research() {
                 <span className="px-3 py-1 text-xs font-medium rounded-full bg-accent/10 text-accent border border-accent/20">
                   {item.status}
                 </span>
-                <span className="text-xs text-secondary">{item.institution}</span>
+                <span className="text-sm text-secondary font-medium">{item.institution}</span>
               </div>
 
-              <h3 className="font-black uppercase text-primary text-xl leading-tight mb-2">
+              <h3 className="font-black uppercase text-primary text-2xl leading-tight mb-2">
                 {item.title}
               </h3>
 
               {item.advisor && (
-                <p className="text-xs text-secondary mb-4">Advisor: {item.advisor}</p>
+                <p className="text-sm text-secondary mb-4 font-medium">Advisor: {item.advisor}</p>
               )}
 
-              <p className="text-sm text-secondary leading-relaxed mb-6">{item.description}</p>
+              <p className="text-base text-secondary leading-relaxed mb-6">{item.description}</p>
 
-              <div className="border-t border-border pt-4 space-y-1.5">
+              <div className="border-t border-border pt-4 space-y-2">
                 {item.details.map((d, j) => (
-                  <p key={j} className="text-xs text-secondary flex gap-2">
-                    <span className="text-accent flex-shrink-0">—</span>
+                  <p key={j} className="text-sm text-secondary flex gap-2">
+                    <span className="text-accent flex-shrink-0 font-bold">—</span>
                     <span>{d}</span>
                   </p>
                 ))}

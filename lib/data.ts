@@ -155,16 +155,17 @@ export const projects: Project[] = [
     github: "https://github.com/JosueT1212/Tomato-Crop-Hackathon-Winner-Project",
   },
   {
-    title: "Berries Stock Forecasting",
-    subtitle: "Time-Series Demand Forecasting",
+    title: "Berries TDA Forecasting",
+    subtitle: "Topological Data Analysis + Time-Series",
     description:
-      "ML pipeline forecasting berry inventory levels to reduce waste and optimize supply chain decisions for agricultural distributors.",
+      "Applies Topological Data Analysis (TDA) to the FRED Berry Producer Price Index — using Takens delay embedding and Vietoris-Rips persistent homology to extract topological features invisible to classical methods, then feeding them into ML/DL forecasting models.",
     highlights: [
-      "Compared ARIMA, XGBoost, and LSTM architectures on real sales data",
-      "Feature engineering: seasonality decomposition, rolling statistics, lag features",
-      "Deployed interactive forecast dashboard for non-technical stakeholders",
+      "Takens embedding (d=12, τ=3) reconstructs attractor from scalar price series",
+      "H₀ and H₁ persistent homology via Vietoris-Rips — detects nonlinear cyclicity",
+      "Key finding: H₁ persistence strongest during 2008–2012 financial crisis, confirming elevated cyclicity",
+      "TDA features improve MAE over pure-LSTM baselines — multi-task learning with EP loss",
     ],
-    stack: ["Python", "scikit-learn", "XGBoost", "PyTorch", "pandas", "Jupyter"],
+    stack: ["Python", "giotto-tda", "ripser", "PyTorch", "scikit-learn", "pandas"],
     github: "https://github.com/JosueT1212/Berries_Stock_Forecasting",
   },
   {
