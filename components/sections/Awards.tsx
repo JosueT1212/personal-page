@@ -1,27 +1,46 @@
-import { SectionWrapper } from "@/components/ui/SectionWrapper";
+"use client";
+
+import { motion } from "framer-motion";
 import { awards } from "@/lib/data";
 
 export function Awards() {
   return (
-    <SectionWrapper className="bg-card border-y border-border">
-      <div className="max-w-5xl mx-auto">
-        <h2 className="font-serif text-3xl sm:text-4xl text-primary mb-10 max-w-3xl mx-auto">
-          Awards
+    <section className="px-6 py-24">
+      <div className="max-w-7xl mx-auto">
+        <div className="flex items-center gap-2 mb-4">
+          <span className="w-2 h-2 rounded-full bg-accent flex-shrink-0" />
+          <span className="text-xs font-medium text-secondary tracking-[0.2em] uppercase">Recognition</span>
+        </div>
+
+        <h2
+          className="font-black uppercase text-primary leading-none tracking-tight mb-16"
+          style={{ fontSize: "clamp(3rem, 7vw, 96px)" }}
+        >
+          Awards.
         </h2>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-3xl mx-auto">
+        <div className="space-y-0">
           {awards.map((award, i) => (
-            <div key={i} className="flex flex-col gap-1">
-              <div className="flex items-center justify-between">
-                <h3 className="font-medium text-primary text-sm">{award.name}</h3>
-                <span className="text-xs text-secondary">{award.year}</span>
+            <motion.div
+              key={i}
+              initial={{ opacity: 0, y: 12 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: i * 0.07, duration: 0.4 }}
+              className="flex items-center justify-between py-6 border-b border-border group"
+            >
+              <div className="flex items-center gap-6">
+                <span className="text-xs text-secondary tabular-nums w-6">{String(i + 1).padStart(2, "0")}</span>
+                <div>
+                  <p className="font-semibold text-primary group-hover:text-accent transition-colors">{award.name}</p>
+                  <p className="text-sm text-secondary">{award.detail}</p>
+                </div>
               </div>
-              <p className="text-xs text-secondary">{award.detail}</p>
-              <div className="w-full h-px bg-border mt-2" />
-            </div>
+              <span className="text-sm text-secondary tabular-nums">{award.year}</span>
+            </motion.div>
           ))}
         </div>
       </div>
-    </SectionWrapper>
+    </section>
   );
 }

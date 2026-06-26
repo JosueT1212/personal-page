@@ -5,6 +5,7 @@ export type Hero = {
   github: string;
   email: string;
   resumeUrl: string;
+  avatarUrl: string;
 };
 
 export const hero: Hero = {
@@ -14,10 +15,16 @@ export const hero: Hero = {
   github: "https://github.com/JosueT1212",
   email: "josuetapiahernandez@gmail.com",
   resumeUrl: "/resume.pdf",
+  avatarUrl: "/avatar.jpg",
 };
 
 export const origin = {
   bio: "I spent my teenage years grinding national olympiads in math, physics, and informatics — not for trophies, but because hard problems were addictive. Those competitions taught me to think rigorously under pressure. Now I apply that same obsession to research and engineering: building ML systems that reason, learning from particle physicists, and shipping products that work in the real world.",
+};
+
+export const about = {
+  bio1: "I'm Josue Tapia Hernández, studying Mathematics and Data Science at Tecnológico de Monterrey with a 97/100 GPA. I co-founded JATA, an AgTech startup that won 1st place at the UST Hackathon, and I research Lorentz Equivariant GNNs for high-energy physics.",
+  bio2: "I want to be at the frontier of AI — the kind of person who publishes rigorous research AND ships systems people use. Obsessive about hard problems since my olympiad days.",
 };
 
 export type TimelineItem = {

@@ -1,36 +1,49 @@
-import { SectionWrapper } from "@/components/ui/SectionWrapper";
-import { Badge } from "@/components/ui/Badge";
+"use client";
+
+import { motion } from "framer-motion";
 import { projects } from "@/lib/data";
 
 export function Projects() {
   return (
-    <SectionWrapper>
-      <div className="max-w-5xl mx-auto">
-        <h2 className="font-serif text-3xl sm:text-4xl text-primary mb-2 max-w-3xl mx-auto">
-          Things I&apos;ve shipped
+    <section id="projects" className="px-6 py-24 bg-card border-y border-border">
+      <div className="max-w-7xl mx-auto">
+        <div className="flex items-center gap-2 mb-4">
+          <span className="w-2 h-2 rounded-full bg-accent flex-shrink-0" />
+          <span className="text-xs font-medium text-secondary tracking-[0.2em] uppercase">Selected Projects</span>
+        </div>
+
+        <h2
+          className="font-black uppercase text-primary leading-none tracking-tight mb-16"
+          style={{ fontSize: "clamp(3rem, 7vw, 96px)" }}
+        >
+          Things I&apos;ve<br />shipped.
         </h2>
-        <p className="text-secondary mb-10 max-w-3xl mx-auto">
-          Production systems, not side projects.
-        </p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {projects.map((project, i) => (
-            <div
+            <motion.div
               key={i}
-              className="group p-6 rounded-xl border border-border bg-card hover:shadow-lg transition-all duration-300 hover:-translate-y-1 flex flex-col"
+              initial={{ opacity: 0, y: 24 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: i * 0.1, duration: 0.5 }}
+              className="bg-surface rounded-2xl border border-border p-8 flex flex-col hover:shadow-md transition-shadow duration-300"
             >
-              <div className="flex items-start justify-between mb-4">
+              <div className="flex items-start justify-between mb-6">
                 <div>
-                  <h3 className="font-serif text-2xl text-primary leading-tight">
+                  <p className="text-xs text-secondary uppercase tracking-widest mb-2">
+                    {String(i + 1).padStart(2, "0")} · AI / ML
+                  </p>
+                  <h3 className="font-black uppercase text-primary text-2xl leading-tight">
                     {project.title}
                   </h3>
-                  <p className="text-sm text-secondary mt-0.5">{project.subtitle}</p>
+                  <p className="text-sm text-secondary mt-1">{project.subtitle}</p>
                 </div>
                 <a
                   href={project.github}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-secondary hover:text-accent transition-colors ml-3 mt-1 flex-shrink-0"
+                  className="text-secondary hover:text-accent transition-colors flex-shrink-0 ml-4"
                   aria-label={`GitHub repo for ${project.title}`}
                 >
                   <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -39,28 +52,26 @@ export function Projects() {
                 </a>
               </div>
 
-              <p className="text-sm text-secondary leading-relaxed mb-5">
-                {project.description}
-              </p>
+              <p className="text-sm text-secondary leading-relaxed mb-6">{project.description}</p>
 
               <ul className="space-y-2 mb-6 flex-1">
                 {project.highlights.map((h, j) => (
                   <li key={j} className="text-xs text-secondary flex gap-2">
-                    <span className="text-accent mt-0.5 flex-shrink-0">→</span>
+                    <span className="text-accent flex-shrink-0">→</span>
                     <span>{h}</span>
                   </li>
                 ))}
               </ul>
 
-              <div className="flex flex-wrap gap-2 mt-auto">
-                {project.stack.map((tech) => (
-                  <Badge key={tech} label={tech} />
-                ))}
+              <div className="border-t border-border pt-4">
+                <p className="text-xs text-secondary uppercase tracking-widest mb-2">
+                  {project.stack.join(" · ")}
+                </p>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>
-    </SectionWrapper>
+    </section>
   );
 }

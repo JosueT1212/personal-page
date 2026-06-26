@@ -12,17 +12,26 @@ html {
 }
 
 body {
-  background-color: #fafafa;
+  background-color: #F0EDE6;
   color: #0f0f0f;
   font-family: var(--font-inter), sans-serif;
   -webkit-font-smoothing: antialiased;
 }
 
-@keyframes float {
-  0%, 100% { transform: translateY(0px) rotate(0deg); opacity: 0.04; }
-  50% { transform: translateY(-20px) rotate(5deg); opacity: 0.08; }
+@keyframes blob-pulse {
+  0%, 100% { transform: scale(1) translate(0, 0); }
+  50% { transform: scale(1.08) translate(20px, -20px); }
 }
 
-.float-symbol {
-  animation: float linear infinite;
+.blob-animate {
+  animation: blob-pulse 8s ease-in-out infinite;
+}
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+.marquee-track {
+  animation: marquee 20s linear infinite;
 }
