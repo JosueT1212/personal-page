@@ -29,45 +29,85 @@ export const about = {
 
 export type TimelineItem = {
   year: string;
-  label: string;
-  image?: string; // optional: path relative to /public, e.g. "/timeline/icpc.jpg"
+  title: string;
+  subtitle: string;
+  bullets: string[];
+  tags: string[];
+  image?: string;
   imageAlt?: string;
 };
 
 export const timeline: TimelineItem[] = [
   {
-    year: "2021–22",
-    label: "National Math Olympiad — Honourable Mention ×2",
+    year: "2021 — 2022",
+    title: "National Math Olympiad",
+    subtitle: "Honourable Mention ×2",
+    bullets: [
+      "Top 15% nationally across two consecutive years",
+      "Selected for state-level intensive training program",
+    ],
+    tags: ["COMPETITION", "MATHEMATICS", "GUADALAJARA"],
     image: "/timeline/math-olympiad.jpg",
     imageAlt: "Math Olympiad certificate",
   },
   {
-    year: "Nov 2022",
-    label: "National Physics Olympiad — Bronze Medal",
+    year: "NOV 2022",
+    title: "National Physics Olympiad",
+    subtitle: "Bronze Medal",
+    bullets: [
+      "Top 20% nationally · Qualified for IPhO national training camp",
+      "Classical mechanics, electromagnetism, and optics at olympiad depth",
+    ],
+    tags: ["COMPETITION", "PHYSICS", "BRONZE MEDAL"],
     image: "/timeline/physics-olympiad.jpg",
     imageAlt: "Physics Olympiad bronze medal",
   },
   {
-    year: "Nov 2022",
-    label: "National Informatics Olympiad — Bronze Medal",
+    year: "NOV 2022",
+    title: "National Informatics Olympiad",
+    subtitle: "Bronze Medal",
+    bullets: [
+      "Top 15% nationally in competitive programming",
+      "Algorithms, data structures, and combinatorics in C++",
+    ],
+    tags: ["COMPETITION", "INFORMATICS", "BRONZE MEDAL"],
     image: "/timeline/informatics-olympiad.jpg",
     imageAlt: "Informatics Olympiad bronze medal",
   },
   {
-    year: "2024–25",
-    label: "ICPC National — Honourable Mention ×2",
+    year: "2024 — 2025",
+    title: "ICPC National Regional",
+    subtitle: "Honourable Mention ×2",
+    bullets: [
+      "Top 17% nationally across two contest seasons",
+      "Team competitive programming — algorithms under time pressure in C++",
+    ],
+    tags: ["COMPETITION", "COMPETITIVE PROGRAMMING", "GUADALAJARA"],
     image: "/timeline/icpc.jpg",
     imageAlt: "ICPC team photo",
   },
   {
-    year: "Sep 2025",
-    label: "Co-founded JATA · 1st Place UST Hackathon",
+    year: "SEP 2025 — PRESENT",
+    title: "JATA",
+    subtitle: "Co-Founder & CTO · 1st Place UST Hackathon",
+    bullets: [
+      "Built and shipped AI crop forecasting platform to a real paying client",
+      "Live across 2 commercial greenhouses — 5 growing seasons of production data",
+      "Actively expanding to new greenhouse clients across Mexico",
+    ],
+    tags: ["AI", "AGTECH", "STARTUP", "GUADALAJARA · ON-SITE"],
     image: "/timeline/jata-hackathon.jpg",
     imageAlt: "JATA team at UST Hackathon",
   },
   {
-    year: "Dec 2025",
-    label: "ML Researcher @ Tec de Monterrey",
+    year: "DEC 2025 — PRESENT",
+    title: "Tecnológico de Monterrey",
+    subtitle: "ML Researcher",
+    bullets: [
+      "Lorentz Equivariant GNNs for particle jet analysis in high-energy physics",
+      "Advisor: Prof. Andrés Ramírez Morales · Reproducing LorentzNet SOTA (AUC > 0.98)",
+    ],
+    tags: ["ML RESEARCH", "PHYSICS", "GUADALAJARA · ON-SITE"],
     image: "/timeline/research.jpg",
     imageAlt: "Research lab",
   },
@@ -80,6 +120,9 @@ export type ResearchItem = {
   description: string;
   details: string[];
   status: "Active" | "Completed";
+  link?: string;
+  linkLabel?: string;
+  cta?: string;
 };
 
 export const research: ResearchItem[] = [
@@ -100,13 +143,16 @@ export const research: ResearchItem[] = [
     title: "CNN-RNN Crop Yield Forecasting",
     institution: "JATA — AgTech Startup",
     description:
-      "End-to-end deep learning platform predicting greenhouse harvests 4 weeks ahead with 16 sensor features.",
+      "End-to-end deep learning platform predicting greenhouse harvests 4 weeks ahead with 16 sensor features. Already deployed across 2 commercial greenhouses — now available to new clients.",
     details: [
       "R² = 0.70 · MAPE = 10.7% on held-out test season",
       "3 residual conv blocks + 3-layer LSTM, correlation-weighted MSE loss",
-      "357 days · 2 greenhouses · 5 growing seasons",
+      "357 days · 2 greenhouses · 5 growing seasons of real production data",
     ],
     status: "Active",
+    link: "https://jata-landing-page.vercel.app",
+    linkLabel: "Visit JATA →",
+    cta: "Is your greenhouse flying blind? JATA turns raw sensor data into harvest forecasts your team can act on — 4 weeks ahead.",
   },
 ];
 

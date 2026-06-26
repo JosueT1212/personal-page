@@ -46,7 +46,7 @@ export function Research() {
 
               <p className="text-base text-secondary leading-relaxed mb-6">{item.description}</p>
 
-              <div className="border-t border-border pt-4 space-y-2">
+              <div className="border-t border-border pt-4 space-y-2 mb-6">
                 {item.details.map((d, j) => (
                   <p key={j} className="text-sm text-secondary flex gap-2">
                     <span className="text-accent flex-shrink-0 font-bold">—</span>
@@ -54,6 +54,33 @@ export function Research() {
                   </p>
                 ))}
               </div>
+
+              {item.cta && (
+                <div className="bg-accent/5 border border-accent/20 rounded-xl p-4 mb-4">
+                  <p className="text-sm text-primary font-medium leading-relaxed mb-3">{item.cta}</p>
+                  {item.link && (
+                    <a
+                      href={item.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1 text-sm font-bold text-accent hover:underline"
+                    >
+                      {item.linkLabel ?? "Learn more →"}
+                    </a>
+                  )}
+                </div>
+              )}
+
+              {item.link && !item.cta && (
+                <a
+                  href={item.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1 text-sm font-bold text-accent hover:underline"
+                >
+                  {item.linkLabel ?? "Learn more →"}
+                </a>
+              )}
             </motion.div>
           ))}
         </div>
