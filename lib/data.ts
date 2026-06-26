@@ -16,6 +16,10 @@ export const hero: Hero = {
   resumeUrl: "/resume.pdf",
 };
 
+export const origin = {
+  bio: "I spent my teenage years grinding national olympiads in math, physics, and informatics — not for trophies, but because hard problems were addictive. Those competitions taught me to think rigorously under pressure. Now I apply that same obsession to research and engineering: building ML systems that reason, learning from particle physicists, and shipping products that work in the real world.",
+};
+
 export type TimelineItem = {
   year: string;
   label: string;

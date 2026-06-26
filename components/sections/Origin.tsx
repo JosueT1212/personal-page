@@ -1,14 +1,11 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { useRef } from "react";
 import Image from "next/image";
 import { SectionWrapper } from "@/components/ui/SectionWrapper";
-import { timeline } from "@/lib/data";
+import { timeline, origin } from "@/lib/data";
 
 export function Origin() {
-  const scrollRef = useRef<HTMLDivElement>(null);
-
   return (
     <SectionWrapper>
       <div className="max-w-3xl mx-auto">
@@ -17,17 +14,11 @@ export function Origin() {
         </h2>
 
         <p className="text-secondary text-lg leading-relaxed mb-12 max-w-2xl">
-          I spent my teenage years grinding national olympiads in math, physics,
-          and informatics — not for trophies, but because hard problems were
-          addictive. Those competitions taught me to think rigorously under
-          pressure. Now I apply that same obsession to research and engineering:
-          building ML systems that reason, learning from particle physicists,
-          and shipping products that work in the real world.
+          {origin.bio}
         </p>
 
         {/* Timeline — horizontal scroll */}
         <div
-          ref={scrollRef}
           className="flex gap-6 overflow-x-auto pb-4"
           style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
         >
