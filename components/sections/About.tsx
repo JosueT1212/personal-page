@@ -28,12 +28,13 @@ export function About() {
           </div>
 
           <div className="flex justify-center lg:justify-end">
-            <div className="relative w-72 h-72 rounded-full overflow-hidden border-4 border-white shadow-lg">
+            <div className="relative w-80 h-80 rounded-full overflow-hidden border-4 border-white shadow-lg">
               <Image
                 src="/avatar.jpg"
                 alt="Josue Tapia Hernández"
                 fill
-                className="object-cover object-top"
+                className="object-cover"
+                style={{ objectPosition: "center 25%" }}
                 priority
               />
             </div>
@@ -48,9 +49,9 @@ export function About() {
 
         <div className="relative">
           {/* Vertical line */}
-          <div className="absolute left-0 top-0 bottom-0 w-px bg-border ml-[3px]" />
+          <div className="absolute left-0 top-0 bottom-0 w-px bg-border ml-[5px]" />
 
-          <div className="space-y-8 pl-8">
+          <div className="space-y-10 pl-10">
             {timeline.map((item, i) => (
               <motion.div
                 key={i}
@@ -61,9 +62,9 @@ export function About() {
                 className="relative"
               >
                 {/* Dot */}
-                <div className="absolute -left-8 top-1.5 w-[7px] h-[7px] rounded-full bg-accent border-2 border-surface" />
-                <span className="text-xs font-medium text-accent uppercase tracking-wider">{item.year}</span>
-                <p className="text-sm text-primary mt-0.5">{item.label}</p>
+                <div className="absolute -left-10 top-2 w-[11px] h-[11px] rounded-full bg-accent border-2 border-surface shadow-sm" />
+                <span className="text-xs font-semibold text-accent uppercase tracking-[0.15em]">{item.year}</span>
+                <p className="text-base font-medium text-primary mt-1">{item.label}</p>
               </motion.div>
             ))}
           </div>

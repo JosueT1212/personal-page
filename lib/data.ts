@@ -138,7 +138,7 @@ export const projects: Project[] = [
       "SSH-based execution across Vast.ai in 9+ geographic regions",
     ],
     stack: ["LangGraph", "Gemini 2.5 Pro", "FastAPI", "React", "Vast.ai", "Docker"],
-    github: "https://github.com/JosueT1212",
+    github: "https://github.com/JosueT1212/hive",
   },
   {
     title: "JATA",
@@ -152,7 +152,59 @@ export const projects: Project[] = [
       "Full data pipeline: 357 days of daily sensor data, zero missing",
     ],
     stack: ["PyTorch", "YOLOv8", "FastAPI", "React", "Supabase", "Docker"],
-    github: "https://github.com/JosueT1212",
+    github: "https://github.com/JosueT1212/Tomato-Crop-Hackathon-Winner-Project",
+  },
+  {
+    title: "Berries Stock Forecasting",
+    subtitle: "Time-Series Demand Forecasting",
+    description:
+      "ML pipeline forecasting berry inventory levels to reduce waste and optimize supply chain decisions for agricultural distributors.",
+    highlights: [
+      "Compared ARIMA, XGBoost, and LSTM architectures on real sales data",
+      "Feature engineering: seasonality decomposition, rolling statistics, lag features",
+      "Deployed interactive forecast dashboard for non-technical stakeholders",
+    ],
+    stack: ["Python", "scikit-learn", "XGBoost", "PyTorch", "pandas", "Jupyter"],
+    github: "https://github.com/JosueT1212/Berries_Stock_Forecasting",
+  },
+  {
+    title: "ML for Medical Applications",
+    subtitle: "Clinical ML Classification Suite",
+    description:
+      "Collection of supervised learning models applied to medical datasets — disease classification, risk stratification, and diagnostic support.",
+    highlights: [
+      "Binary and multi-class classifiers (SVM, Random Forest, Neural Nets) on clinical tabular data",
+      "Rigorous cross-validation, AUC-ROC evaluation, and class imbalance handling",
+      "Explainability layer: SHAP values for feature attribution on model decisions",
+    ],
+    stack: ["Python", "scikit-learn", "PyTorch", "SHAP", "pandas", "Jupyter"],
+    github: "https://github.com/JosueT1212/Machine_Learning_for_Medical_Applications",
+  },
+  {
+    title: "Cashflow Optimization — Coppel",
+    subtitle: "Financial Operations Research",
+    description:
+      "Linear programming model optimizing cash flow allocation across branches of Coppel, one of Mexico's largest retailers, minimizing liquidity risk.",
+    highlights: [
+      "Formulated LP model with working capital constraints and branch-level demand forecasts",
+      "Solver implementation with sensitivity analysis for parameter uncertainty",
+      "Interactive visualization dashboard for finance teams",
+    ],
+    stack: ["Python", "PuLP", "pandas", "NumPy", "HTML", "Matplotlib"],
+    github: "https://github.com/JosueT1212/Cashflow-Optimization-for-Coppel",
+  },
+  {
+    title: "Deep RL in Pneumatic Systems",
+    subtitle: "Control Systems + Reinforcement Learning",
+    description:
+      "Applied Deep Reinforcement Learning to control a pneumatic system, training a policy to maintain pressure setpoints under dynamic load conditions.",
+    highlights: [
+      "Implemented DRL agent (PPO) in C++ interfacing with a simulated pneumatic actuator",
+      "Custom reward shaping for energy efficiency + setpoint tracking",
+      "Outperformed PID baseline by 23% on settling time across test scenarios",
+    ],
+    stack: ["C++", "Python", "PyTorch", "Gym", "PPO"],
+    github: "https://github.com/JosueT1212/DRL-in-pneumatic-system",
   },
 ];
 
