@@ -59,9 +59,6 @@ export function Origin() {
           ))}
         </div>
 
-        <p className="text-xs text-secondary mt-4 opacity-60">
-          Drop photos into <code className="font-mono">public/timeline/</code> and uncomment the image paths in <code className="font-mono">lib/data.ts</code> to fill the slots above.
-        </p>
       </div>
     </SectionWrapper>
   );

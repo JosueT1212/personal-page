@@ -1,5 +1,5 @@
 import { SectionWrapper } from "@/components/ui/SectionWrapper";
-import { contact } from "@/lib/data";
+import { contact, hero } from "@/lib/data";
 
 export function Contact() {
   return (
@@ -29,7 +29,7 @@ export function Contact() {
         </div>
 
         <p className="text-xs text-secondary mt-16">
-          &copy; {new Date().getFullYear()} Josue Tapia Hernández
+          &copy; {new Date().getFullYear()} {hero.name}
         </p>
       </div>
     </SectionWrapper>
