@@ -24,7 +24,7 @@ export function Contact() {
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 text-accent font-medium hover:underline underline-offset-4 transition-all"
           >
-            github.com/JosueT1212 &rarr;
+            {contact.github.replace("https://", "")} &rarr;
           </a>
         </div>
 
