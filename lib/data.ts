@@ -1,4 +1,13 @@
-export const hero = {
+export type Hero = {
+  name: string;
+  tagline: string;
+  subtext: string;
+  github: string;
+  email: string;
+  resumeUrl: string;
+};
+
+export const hero: Hero = {
   name: "Josue Tapia Hernández",
   tagline: "Research. Ship. Repeat.",
   subtext: "Math & Data Science @ Tec de Monterrey · ML Research · Builder",
@@ -192,7 +201,13 @@ export const skills: SkillGroup[] = [
   },
 ];
 
-export const contact = {
+export type Contact = {
+  email: string;
+  github: string;
+  tagline: string;
+};
+
+export const contact: Contact = {
   email: "josuetapiahernandez@gmail.com",
   github: "https://github.com/JosueT1212",
   tagline: "Open to research collaborations and founding-stage opportunities.",
