@@ -178,7 +178,7 @@ export const projects: Project[] = [
       "SSH-based execution across Vast.ai in 9+ geographic regions",
     ],
     stack: ["LangGraph", "Gemini 2.5 Pro", "FastAPI", "React", "Vast.ai", "Docker"],
-    github: "https://github.com/JosueT1212/hive",
+    github: "https://github.com/JosueT1212/MLOPS_Optimization_Agent_Swarm",
   },
   {
     title: "JATA",
