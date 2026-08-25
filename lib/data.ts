@@ -23,7 +23,7 @@ export const origin = {
 };
 
 export const about = {
-  bio1: "I'm Josue Tapia Hernández, studying Mathematics and Data Science at Tecnológico de Monterrey with a 97/100 GPA. I co-founded JATA, an AgTech startup that won 1st place at the UST Hackathon, and I research Lorentz Equivariant GNNs for high-energy physics.",
+  bio1: "I'm Josue Tapia Hernández, studying Mathematics and Data Science at Tecnológico de Monterrey with a 97/100 GPA. I co-founded JATA, an AgTech startup that won 1st place at the UST Hackathon, and I research SU(2)-equivariant neural networks for high-energy physics — first author on a paper in preparation.",
   bio2: "I want to be at the frontier of AI — the kind of person who publishes rigorous research AND ships systems people use. Obsessive about hard problems since my olympiad days.",
 };
 
@@ -91,8 +91,8 @@ export const timeline: TimelineItem[] = [
     title: "JATA",
     subtitle: "Co-Founder & CTO · 1st Place UST Hackathon",
     bullets: [
-      "Built and shipped AI crop forecasting platform to a real paying client",
-      "Live across 2 commercial greenhouses — 5 growing seasons of production data",
+      "Hackathon win turned into a company with paying customers",
+      "FastAPI + React platform live across 2 commercial greenhouses — 5 growing seasons of production data",
       "Actively expanding to new greenhouse clients across Mexico",
     ],
     tags: ["AI", "AGTECH", "STARTUP", "GUADALAJARA · ON-SITE"],
@@ -104,8 +104,9 @@ export const timeline: TimelineItem[] = [
     title: "Tecnológico de Monterrey",
     subtitle: "ML Researcher",
     bullets: [
-      "Lorentz Equivariant GNNs for particle jet analysis in high-energy physics",
-      "Advisor: Prof. Andrés Ramírez Morales · Reproducing LorentzNet SOTA (AUC > 0.98)",
+      "SU(2)-equivariant Clifford-algebra transformers for top-quark jet tagging",
+      "First author on a paper in preparation · AUC 0.9850 on the 1.2M-jet benchmark",
+      "Advisor: Prof. Andrés Ramírez Morales",
     ],
     tags: ["ML RESEARCH", "PHYSICS", "GUADALAJARA · ON-SITE"],
     image: "/timeline/research.jpg",
@@ -127,32 +128,18 @@ export type ResearchItem = {
 
 export const research: ResearchItem[] = [
   {
-    title: "Lorentz Equivariant Graph Neural Networks",
+    title: "SU(2)-Equivariant Transformers for Top-Jet Tagging",
     institution: "Tecnológico de Monterrey",
     advisor: "Prof. Andrés Ramírez Morales",
     description:
-      "Investigating GNN architectures for particle jet symmetry analysis in high-energy physics.",
+      "First-author work on an SU(2)/Spin(3)-equivariant transformer built over the Cl(3,0) geometric algebra, injecting physics observables into otherwise-unused grades of the input multivector.",
     details: [
-      "Reproducing SOTA benchmarks (LorentzNet, AUC > 0.98)",
-      "Processing high-dimensional particle collision data",
-      "Designing asymptotic inference pipeline for discovery significance",
+      "Best variant: test AUC 0.9811 ± 0.0009 at 189K parameters — matching our L-GATr rerun (0.9813) with 5.7× fewer parameters",
+      "AUC 0.9850 · 93.8% accuracy on the full 1.2M-jet top-tagging reference benchmark",
+      "2.5K-line PyTorch library (equivariant linear, attention, LayerNorm, geometric-bilinear MLP) with a 60+ test suite including explicit equivariance checks",
+      "8-variant ablation over grade-0 Casimir masses, grade-2 subjet-axis bivectors, and grade-3 parity-odd observables",
     ],
     status: "Active",
-  },
-  {
-    title: "CNN-RNN Crop Yield Forecasting",
-    institution: "JATA — AgTech Startup",
-    description:
-      "End-to-end deep learning platform predicting greenhouse harvests 4 weeks ahead with 16 sensor features. Already deployed across 2 commercial greenhouses — now available to new clients.",
-    details: [
-      "R² = 0.70 · MAPE = 10.7% on held-out test season",
-      "3 residual conv blocks + 3-layer LSTM, correlation-weighted MSE loss",
-      "357 days · 2 greenhouses · 5 growing seasons of real production data",
-    ],
-    status: "Active",
-    link: "https://jata-landing-page.vercel.app",
-    linkLabel: "Visit JATA →",
-    cta: "Is your greenhouse flying blind? JATA turns raw sensor data into harvest forecasts your team can act on — 4 weeks ahead.",
   },
 ];
 
@@ -184,14 +171,15 @@ export const projects: Project[] = [
     title: "JATA",
     subtitle: "AgTech Crop Forecasting — Shipped to Client",
     description:
-      "Built and deployed an agricultural intelligence platform to a real paying client operating 2 commercial greenhouses. Forecasts weekly tomato harvests, tracks sensor data across full growing seasons, and is actively expanding to new greenhouse clients.",
+      "Took an AgTech product from a hackathon win to paying customers: an agricultural intelligence platform running in production for 2 commercial greenhouses, forecasting weekly tomato harvests from live sensor telemetry — now onboarding additional clients.",
     highlights: [
-      "Live in production across 2 greenhouses — 5 growing seasons of real operational data",
-      "CNN-RNN model (3 residual conv blocks + 3-layer LSTM) — R²=0.70, MAPE=10.7%, 16 sensor features",
-      "365 weekly production records, 357 days of daily sensor data, zero missing values",
-      "Won 1st Place at UST Hackathon · Currently onboarding additional greenhouse clients",
+      "Dockerized FastAPI backend (7+ routes: auth, ingest, sensors, predictions, admin) on Railway, with JWT auth and Postgres row-level security via Supabase",
+      "Telegraf ingest service streaming 16 sensor features into the API, surfaced in a React dashboard polling every 30s — operators track sensor health, anomalies, and forecast-vs-actual yield unassisted",
+      "CNN-RNN forecaster (3 residual conv blocks + 3-layer LSTM) — R²=0.70, MAPE=10.7% over 365 weekly production records",
+      "pytest integration tests across the ingest, auth, and prediction endpoints",
+      "Won 1st Place at UST Hackathon · live across 5 growing seasons of real operational data",
     ],
-    stack: ["PyTorch", "YOLOv8", "FastAPI", "React", "Supabase", "Docker"],
+    stack: ["FastAPI", "PyTorch", "YOLOv8", "React", "Supabase", "Docker", "Railway", "Telegraf"],
     github: "https://github.com/JosueT1212/Tomato-Crop-Hackathon-Winner-Project",
   },
   {
@@ -209,19 +197,6 @@ export const projects: Project[] = [
     github: "https://github.com/JosueT1212/Berries_Stock_Forecasting",
   },
   {
-    title: "ML for Medical Applications",
-    subtitle: "Clinical ML Classification Suite",
-    description:
-      "Collection of supervised learning models applied to medical datasets — disease classification, risk stratification, and diagnostic support.",
-    highlights: [
-      "Binary and multi-class classifiers (SVM, Random Forest, Neural Nets) on clinical tabular data",
-      "Rigorous cross-validation, AUC-ROC evaluation, and class imbalance handling",
-      "Explainability layer: SHAP values for feature attribution on model decisions",
-    ],
-    stack: ["Python", "scikit-learn", "PyTorch", "SHAP", "pandas", "Jupyter"],
-    github: "https://github.com/JosueT1212/Machine_Learning_for_Medical_Applications",
-  },
-  {
     title: "Cashflow Optimization — Coppel",
     subtitle: "Financial Operations Research",
     description:
@@ -233,19 +208,6 @@ export const projects: Project[] = [
     ],
     stack: ["Python", "PuLP", "pandas", "NumPy", "HTML", "Matplotlib"],
     github: "https://github.com/JosueT1212/Cashflow-Optimization-for-Coppel",
-  },
-  {
-    title: "Deep RL in Pneumatic Systems",
-    subtitle: "Control Systems + Reinforcement Learning",
-    description:
-      "Applied Deep Reinforcement Learning to control a pneumatic system, training a policy to maintain pressure setpoints under dynamic load conditions.",
-    highlights: [
-      "Implemented DRL agent (PPO) in C++ interfacing with a simulated pneumatic actuator",
-      "Custom reward shaping for energy efficiency + setpoint tracking",
-      "Outperformed PID baseline by 23% on settling time across test scenarios",
-    ],
-    stack: ["C++", "Python", "PyTorch", "Gym", "PPO"],
-    github: "https://github.com/JosueT1212/DRL-in-pneumatic-system",
   },
 ];
 
@@ -291,7 +253,7 @@ export const skills: SkillGroup[] = [
   {
     label: "AI & ML",
     items: [
-      "PyTorch", "TensorFlow", "PEFT/LoRA", "LangGraph",
+      "PyTorch", "TensorFlow", "PEFT/LoRA", "LangGraph", "Clifford/GA",
       "YOLOv8", "scikit-learn", "XGBoost", "LeanDojo",
       "Gemini API", "DSPy",
     ],
