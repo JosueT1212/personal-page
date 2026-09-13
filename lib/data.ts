@@ -96,8 +96,8 @@ export const timeline: TimelineItem[] = [
     image: "/timeline/icpc.jpg",
     imageAlt: "ICPC team photo",
     links: [
-      { label: "2024 Mexico Finals standings", href: "https://icpc.global/regionals/finder/Mexico-2025/standings" },
-      { label: "2025 Mexico Finals standings", href: "https://icpc.global/regionals/finder/Mexico-2026/standings" },
+      { label: "2024 Mexico Finals certificate", href: "/certificates/icpc-mexico-finals-2024.pdf" },
+      { label: "2025 Mexico Finals certificate", href: "/certificates/icpc-mexico-finals-2025.pdf" },
     ],
   },
   {
