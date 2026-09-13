@@ -154,18 +154,18 @@ export type Project = {
 
 export const projects: Project[] = [
   {
-    title: "Hive",
-    subtitle: "Autonomous MLOps Agent Platform",
+    title: "FLI Holdings",
+    subtitle: "Multi-Agent Financial Copilot",
     description:
-      "12-agent LangGraph pipeline that autonomously provisions cloud GPUs, generates training scripts via LLM, and optimizes ML training end-to-end.",
+      "Three-agent pipeline that turns raw restaurant-group financials (5 branches, 2.7K spreadsheet rows, 44.7% invalid) into executive memos with prioritized action items — every number computed by code, never by the LLM.",
     highlights: [
-      "Reduced manual MLOps workflow from ~2 hours to under 10 minutes",
-      "99% GPU cost reduction: $0.029/hr vs $3.50/hr average",
-      "Real-time React dashboard with WebSocket monitoring across 7 API routes",
-      "SSH-based execution across Vast.ai in 9+ geographic regions",
+      "Quantitative agent validates monthly spreadsheets, computes KPIs by branch/product/category, and flags branches below margin or revenue thresholds",
+      "Qualitative agent ingests PDFs and scanned images via OCR, embeds into ChromaDB, and runs schema-constrained Claude extraction into typed fields",
+      "Synthesis agent merges findings into a PDF memo; typed Pydantic contracts between every agent",
+      "What-If Lab: 5 payroll/pricing/closure scenarios + break-even solver, verified by 42 tests (pytest + Vitest)",
     ],
-    stack: ["LangGraph", "Gemini 2.5 Pro", "FastAPI", "React", "Vast.ai", "Docker"],
-    github: "https://github.com/JosueT1212/MLOPS_Optimization_Agent_Swarm",
+    stack: ["Python", "Claude API", "Pydantic", "FastAPI", "ChromaDB", "React/TS", "Vite"],
+    github: "https://github.com/Emilio-Mtz-bit/FLI-Holding-Agents",
   },
   {
     title: "JATA",
