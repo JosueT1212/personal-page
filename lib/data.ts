@@ -248,21 +248,22 @@ export type SkillGroup = {
 export const skills: SkillGroup[] = [
   {
     label: "Languages & Core",
-    items: ["Python", "C++", "R", "SQL", "Bash", "Git", "Linux", "Lean 4"],
+    items: ["Python", "Java", "TypeScript", "C++", "SQL", "R", "Bash", "Git", "Linux", "Lean 4"],
   },
   {
     label: "AI & ML",
     items: [
-      "PyTorch", "TensorFlow", "PEFT/LoRA", "LangGraph", "Clifford/GA",
-      "YOLOv8", "scikit-learn", "XGBoost", "LeanDojo",
-      "Gemini API", "DSPy",
+      "PyTorch", "TensorFlow", "scikit-learn", "PEFT/LoRA", "LangGraph", "DSPy",
+      "Claude API", "Gemini API", "XGBoost", "PuLP", "Hydra", "giotto-tda",
+      "Clifford/GA",
     ],
   },
   {
-    label: "Infra & Web",
+    label: "Backend & Cloud",
     items: [
-      "FastAPI", "React", "Docker", "WebSockets",
-      "Vast.ai", "GitHub Actions", "Hugging Face Hub",
+      "FastAPI", "Spring Boot", "REST", "JWT/OAuth2", "React", "PostgreSQL (RLS)", "Redis",
+      "AWS (Lambda, DynamoDB, S3, SES, EventBridge, CDK)", "Docker", "GitHub Actions",
+      "Vercel", "Railway", "pytest", "JUnit", "Vitest",
     ],
   },
 ];
