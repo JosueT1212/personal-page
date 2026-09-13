@@ -35,6 +35,7 @@ export type TimelineItem = {
   tags: string[];
   image?: string;
   imageAlt?: string;
+  links?: { label: string; href: string }[];
 };
 
 export const timeline: TimelineItem[] = [
@@ -46,9 +47,13 @@ export const timeline: TimelineItem[] = [
       "Top 15% nationally across two consecutive years",
       "Selected for state-level intensive training program",
     ],
-    tags: ["COMPETITION", "MATHEMATICS", "GUADALAJARA"],
+    tags: ["COMPETITION", "MATHEMATICS", "AGUASCALIENTES"],
     image: "/timeline/math-olympiad.jpg",
     imageAlt: "Math Olympiad certificate",
+    links: [
+      { label: "OMMAGS profile", href: "https://ommags.com/perfil/1472" },
+      { label: "OMMAGS alumni", href: "https://ommags.com/egresados" },
+    ],
   },
   {
     year: "NOV 2022",
@@ -61,6 +66,9 @@ export const timeline: TimelineItem[] = [
     tags: ["COMPETITION", "PHYSICS", "BRONZE MEDAL"],
     image: "/timeline/physics-olympiad.jpg",
     imageAlt: "Physics Olympiad bronze medal",
+    links: [
+      { label: "XXXIII ONF 2022 (SMF)", href: "https://smf.mx/programas/olimpiada-nacional-de-fisica/onf-2022/" },
+    ],
   },
   {
     year: "NOV 2022",
@@ -73,6 +81,9 @@ export const timeline: TimelineItem[] = [
     tags: ["COMPETITION", "INFORMATICS", "BRONZE MEDAL"],
     image: "/timeline/informatics-olympiad.jpg",
     imageAlt: "Informatics Olympiad bronze medal",
+    links: [
+      { label: "Official OMI results (AGU-4, 27ª OMI)", href: "https://www.olimpiadadeinformatica.org.mx/Resultados/Profile/view?usuario=_8878&tipo=OMI" },
+    ],
   },
   {
     year: "2024 — 2025",
@@ -85,6 +96,10 @@ export const timeline: TimelineItem[] = [
     tags: ["COMPETITION", "COMPETITIVE PROGRAMMING", "GUADALAJARA"],
     image: "/timeline/icpc.jpg",
     imageAlt: "ICPC team photo",
+    links: [
+      { label: "2024 Mexico Finals standings", href: "https://icpc.global/regionals/finder/Mexico-2025/standings" },
+      { label: "2025 Mexico Finals standings", href: "https://icpc.global/regionals/finder/Mexico-2026/standings" },
+    ],
   },
   {
     year: "SEP 2025 — PRESENT",

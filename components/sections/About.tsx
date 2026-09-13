@@ -89,6 +89,22 @@ export function About() {
                     ))}
                   </ul>
 
+                  {item.links && (
+                    <div className="flex flex-wrap gap-x-4 gap-y-1 mb-4">
+                      {item.links.map((l, j) => (
+                        <a
+                          key={j}
+                          href={l.href}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-sm text-accent underline underline-offset-4 hover:opacity-80"
+                        >
+                          {l.label} ↗
+                        </a>
+                      ))}
+                    </div>
+                  )}
+
                   <div className="flex flex-wrap gap-2">
                     {item.tags.map((tag, j) => (
                       <span
