@@ -50,9 +50,6 @@ export const timeline: TimelineItem[] = [
     tags: ["COMPETITION", "MATHEMATICS", "AGUASCALIENTES"],
     image: "/timeline/math-olympiad.jpg",
     imageAlt: "Math Olympiad certificate",
-    links: [
-      { label: "OMMAGS alumni", href: "https://ommags.com/egresados" },
-    ],
   },
   {
     year: "NOV 2022",
@@ -65,9 +62,6 @@ export const timeline: TimelineItem[] = [
     tags: ["COMPETITION", "PHYSICS", "BRONZE MEDAL"],
     image: "/timeline/physics-olympiad.jpg",
     imageAlt: "Physics Olympiad bronze medal",
-    links: [
-      { label: "XXXIII ONF 2022 (SMF)", href: "https://smf.mx/programas/olimpiada-nacional-de-fisica/onf-2022/" },
-    ],
   },
   {
     year: "NOV 2022",
