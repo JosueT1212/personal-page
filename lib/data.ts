@@ -86,13 +86,14 @@ export const timeline: TimelineItem[] = [
   },
   {
     year: "2024 — 2025",
-    title: "ICPC National Regional",
-    subtitle: "Honourable Mention ×2",
+    title: "ICPC Mexico Finals",
+    subtitle: "Honourable Mention 2024 · Finalist 2025",
     bullets: [
-      "Top 17% nationally across two contest seasons",
+      "2024: Honourable Mention with ITESM Ags 01 (Campus Aguascalientes)",
+      "2025: 71st place with Datashots (Campus Guadalajara)",
       "Team competitive programming — algorithms under time pressure in C++",
     ],
-    tags: ["COMPETITION", "COMPETITIVE PROGRAMMING", "GUADALAJARA"],
+    tags: ["COMPETITION", "COMPETITIVE PROGRAMMING", "AGUASCALIENTES · GUADALAJARA"],
     image: "/timeline/icpc.jpg",
     imageAlt: "ICPC team photo",
     links: [
