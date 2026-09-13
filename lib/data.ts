@@ -51,7 +51,6 @@ export const timeline: TimelineItem[] = [
     image: "/timeline/math-olympiad.jpg",
     imageAlt: "Math Olympiad certificate",
     links: [
-      { label: "OMMAGS profile", href: "https://ommags.com/perfil/1472" },
       { label: "OMMAGS alumni", href: "https://ommags.com/egresados" },
     ],
   },
