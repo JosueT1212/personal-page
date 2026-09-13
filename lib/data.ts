@@ -121,6 +121,17 @@ export const timeline: TimelineItem[] = [
     image: "/timeline/research.jpg",
     imageAlt: "Research lab",
   },
+  {
+    year: "AUG 2026 — PRESENT",
+    title: "True Data Science",
+    subtitle: "AI Engineer Intern",
+    bullets: [
+      "Integrating agentic AI into a multi-tenant ticketing service (Spring Boot / PostgreSQL) so LLM agents open, comment on, and triage tickets alongside human users",
+      "Automated daily sales-manager reporting with a serverless AWS pipeline (scheduled Lambda, S3, SES) rendering HTML templates to PDF",
+      "Connected reporting, ticketing, and notification services with resilient REST integrations — retry/backoff and idempotent writes on DynamoDB",
+    ],
+    tags: ["AI ENGINEERING", "AWS", "GUADALAJARA"],
+  },
 ];
 
 export type ResearchItem = {
